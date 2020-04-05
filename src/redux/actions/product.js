@@ -5,7 +5,7 @@ export const createProduct = (data) => {
     type: 'CREATE_PRODUCT',
     payload: axios({
       method: 'POST',
-      url: `${process.env.REACT_APP_URL}product`,
+      url: `http://54.159.148.159/product`,
       data: data
     })
   }
@@ -25,7 +25,7 @@ export const readProduct = (data) => {
       type: 'READ_PRODUCT',
       payload: axios({
         method: 'GET',
-        url: `${process.env.REACT_APP_URL}product?product=${product}&category=${category}&sortBy=${sortBy}&paginateId=${paginateId}&limit=${limit}`
+        url: `http://54.159.148.159/product?product=${product}&category=${category}&sortBy=${sortBy}&paginateId=${paginateId}&limit=${limit}`
       })
     }
   }
@@ -36,7 +36,7 @@ export const updateProduct = (id, data) => {
     type: 'UPDATE_PRODUCT',
     payload: axios({
       method: 'PATCH',
-      url: `${process.env.REACT_APP_URL}product/${id}`,
+      url: `http://54.159.148.159/product/${id}`,
       data: data
     })
   }
@@ -47,7 +47,7 @@ export const deleteProduct = (id) => {
     type: 'DELETE_PRODUCT',
     payload: axios({
       method: 'DELETE',
-      url: `${process.env.REACT_APP_URL}product/${id}`
+      url: `http://54.159.148.159/product/${id}`
     })
   }
 }
@@ -57,7 +57,7 @@ export const detailProduct = (id) => {
     type: 'DETAIL_PRODUCT',
     payload: axios({
       method: 'GET',
-      url: `${process.env.REACT_APP_URL}product/${id}`
+      url: `http://54.159.148.159/product/${id}`
     })
   }
 }

@@ -5,7 +5,7 @@ export const login = (data) => {
     type: 'LOGIN',
     payload: axios({
       method: 'POST',
-      url: `${process.env.REACT_APP_URL}account/login`,
+      url: `http://54.159.148.159/account/login`,
       data: data
     })
   }
