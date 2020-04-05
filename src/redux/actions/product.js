@@ -19,21 +19,13 @@ export const readProduct = (data) => {
   const category = data.category || ''
 
   const sortBy = data.sortBy || 'id'
-  const orderBy = data.orderBy || 'ASC'
-  if (product != null || category != null || sortBy != null || orderBy != null || paginateId != null || limit != null) {
+  console.log(data)
+  if (product != null || category != null || sortBy != null || paginateId != null || limit != null) {
     return {
       type: 'READ_PRODUCT',
       payload: axios({
         method: 'GET',
-        url: `${process.env.REACT_APP_URL}product?product=${product}&category=${category}&sortBy=${sortBy}&orderBy=${orderBy}&paginateId=${paginateId}&limit=${limit}`
-      })
-    }
-  } else {
-    return {
-      type: 'READ_PRODUCT',
-      payload: axios({
-        method: 'GET',
-        url: `${process.env.REACT_APP_URL}product`
+        url: `${process.env.REACT_APP_URL}product?product=${product}&category=${category}&sortBy=${sortBy}&paginateId=${paginateId}&limit=${limit}`
       })
     }
   }

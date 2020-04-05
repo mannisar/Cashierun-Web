@@ -11,6 +11,7 @@ class Option extends Component {
         category: "",
         sortBy: "",
         paginateId: "" || 1,
+        activePage: 1,
         totalPages: null
     }
 
@@ -41,13 +42,13 @@ class Option extends Component {
 
     onProduct = async event => {
         if (this.state.category !== undefined && this.state.sortBy !== undefined && this.state.paginateId !== undefined) {
-            this.props.history.push(`/?product=${event.target.value}&category=${this.state.category}&sortBy=${this.state.sortBy}&paginateId=${this.state.paginateId}`)
+            this.props.history.push(`/?product=${event.target.value}&category=${this.state.category}&sortBy=${this.state.sortBy}&paginateId=${this.state.activePage || this.props.paginates.length}`)
         } else if (this.state.category !== undefined) {
             this.props.history.push(`/?product=${event.target.value}&category=${this.state.category}`)
         } else if (this.state.sortBy !== undefined) {
             this.props.history.push(`/?product=${event.target.value}&sortBy=${this.state.sortBy}`)
         } else if (this.state.paginateId !== undefined) {
-            this.props.history.push(`/?product=${event.target.value}&paginateId=${this.state.paginateId}`)
+            this.props.history.push(`/?product=${event.target.value}&paginateId=${this.state.activePage || this.props.paginates.length}`)
         } else {
             this.props.history.push(`/?product=${event.target.value}`)
         }
@@ -65,13 +66,13 @@ class Option extends Component {
 
     onCategory = async event => {
         if (this.state.product !== undefined && this.state.sortBy !== undefined && this.state.paginateId !== undefined) {
-            this.props.history.push(`/?product=${this.state.product}&category=${event.target.value}&sortBy=${this.state.sortBy}&paginateId=${this.state.paginateId}`)
+            this.props.history.push(`/?product=${this.state.product}&category=${event.target.value}&sortBy=${this.state.sortBy}&paginateId=${this.state.activePage || this.props.paginates.length}`)
         } else if (this.state.product !== undefined) {
             this.props.history.push(`/?product=${this.state.product}&category=${event.target.value}`)
         } else if (this.state.sortBy !== undefined) {
             this.props.history.push(`/?category=${event.target.value}&sortBy=${this.state.sortBy}`)
         } else if (this.state.paginateId !== undefined) {
-            this.props.history.push(`/?category=${event.target.value}&paginateId=${this.state.paginateId}`)
+            this.props.history.push(`/?category=${event.target.value}&paginateId=${this.state.activePage || this.props.paginates.length}`)
         } else {
             this.props.history.push(`/?category=${event.target.value}`)
         }
@@ -89,13 +90,13 @@ class Option extends Component {
 
     onSort = async event => {
         if (this.state.category !== undefined && this.state.product !== undefined && this.state.paginateId !== undefined) {
-            this.props.history.push(`/?product=${this.state.product}&category=${this.state.category}&sortBy=${event.target.value}&paginateId=${this.state.paginateId}`)
+            this.props.history.push(`/?product=${this.state.product}&category=${this.state.category}&sortBy=${event.target.value}&paginateId=${this.state.activePage || this.props.paginates.length}`)
         } else if (this.state.category !== undefined) {
             this.props.history.push(`/?category=${this.state.category}&sortBy=${event.target.value}`)
         } else if (this.state.product !== undefined) {
             this.props.history.push(`/?product=${this.state.product}&sortBy=${event.target.value}`)
         } else if (this.state.paginateId !== undefined) {
-            this.props.history.push(`/?sortBy=${event.target.value}&paginateId=${this.state.paginateId}`)
+            this.props.history.push(`/?sortBy=${event.target.value}&paginateId=${this.state.activePage || this.props.paginates.length}`)
         } else {
             this.props.history.push(`/?sortBy=${event.target.value}`)
         }
@@ -226,7 +227,7 @@ class Option extends Component {
                 <span style={{ display: 'inline-block' }}>
                     <ul className="pagination m-0" style={{ backgroundColor: "#a6e3e9" }}>
                         <li className="fa fa-chevron-left" style={fontAW} onClick={this.onPrevious}></li>
-                        {paginates.map((pagination) => (
+                        {this.props.paginates && paginates.map((pagination) => (
                             <li className="page-item" key={pagination}>
                                 <span className="page-link" style={{ cursor: "pointer", color: "#4f3961", fontWeight: 'bold', fontSize: 18 }} onClick={this.onId} id={pagination}>{pagination}</span>
                             </li>

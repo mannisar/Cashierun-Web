@@ -31,7 +31,7 @@ const product = (state = initialState, action) => {
       return {
         ...state,
         products: action.payload.data.result,
-        paginates: action.payload.data.amount
+        paginates: action.payload.data.totalPage
       }
 
     case 'UPDATE_PRODUCT_PENDING':
