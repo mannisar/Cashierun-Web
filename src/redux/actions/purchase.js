@@ -5,7 +5,7 @@ export const purchase = (data) => {
     type: 'PURCHASE',
     payload: axios({
       method: 'POST',
-      url: `http://54.159.148.159/purchase`,
+      url: `${process.env.REACT_APP_URL}purchase`,
       data: data
     })
   }
@@ -16,7 +16,7 @@ export const historyTable = () => {
     type: 'HISTORY_TABLE',
     payload: axios({
       method: 'GET',
-      url: `http://54.159.148.159/purchase/history/table`
+      url: `${process.env.REACT_APP_URL}purchase/history/table`
     })
   }
 }
@@ -26,7 +26,7 @@ export const historyTableDetail = (id) => {
     type: 'HISTORY_TABLE_DETAIL',
     payload: axios({
       method: 'GET',
-      url: `http://54.159.148.159/purchase/history/table/${id}`
+      url: `${process.env.REACT_APP_URL}purchase/history/table/${id}`
     })
   }
 }
@@ -36,7 +36,7 @@ export const historyChart = () => {
     type: 'HISTORY_CHART',
     payload: axios({
       method: 'GET',
-      url: `http://54.159.148.159/purchase/history/chart`
+      url: `${process.env.REACT_APP_URL}purchase/history/chart`
     })
   }
 }
@@ -46,7 +46,7 @@ export const historyCard = () => {
     type: 'HISTORY_CARD',
     payload: axios({
       method: 'GET',
-      url: `http://54.159.148.159/purchase/history/card`
+      url: `${process.env.REACT_APP_URL}purchase/history/card`
     })
   }
 }

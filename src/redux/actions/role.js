@@ -5,7 +5,7 @@ export const readRole = () => {
     type: 'READ_ROLE',
     payload: axios({
       method: 'GET',
-      url: `http://54.159.148.159/role`
+      url: `${process.env.REACT_APP_URL}role`
     })
   }
 }

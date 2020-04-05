@@ -5,7 +5,7 @@ export const createCategory = (data) => {
     type: 'CREATE_CATEGORY',
     payload: axios({
       method: 'POST',
-      url: `http://54.159.148.159/category`,
+      url: `${process.env.REACT_APP_URL}category`,
       data: data
     })
   }
@@ -16,7 +16,7 @@ export const readCategory = () => {
     type: 'READ_CATEGORY',
     payload: axios({
       method: 'GET',
-      url: `http://54.159.148.159/category`
+      url: `${process.env.REACT_APP_URL}category`
     })
   }
 }
@@ -27,7 +27,7 @@ export const updateCategory = (data) => {
     type: 'UPDATE_CATEGORY',
     payload: axios({
       method: 'PATCH',
-      url: `http://54.159.148.159/category/${id}`,
+      url: `${process.env.REACT_APP_URL}category/${id}`,
       data: data
     })
   }
@@ -38,7 +38,7 @@ export const deleteCategory = (id) => {
     type: 'DELETE_CATEGORY',
     payload: axios({
       method: 'DELETE',
-      url: `http://54.159.148.159/category/${id}`
+      url: `${process.env.REACT_APP_URL}category/${id}`
     })
   }
 }
@@ -48,7 +48,7 @@ export const searchCategory = (name) => {
     type: 'SEARCH_CATEGORY',
     payload: axios({
       method: 'GET',
-      url: `http://54.159.148.159/category/${name}`
+      url: `${process.env.REACT_APP_URL}category/${name}`
     })
   }
 }

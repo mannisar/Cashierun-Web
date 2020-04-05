@@ -5,7 +5,7 @@ export const createAccount = (data) => {
     type: 'CREATE_ACCOUNT',
     payload: axios({
       method: 'POST',
-      url: `http://54.159.148.159/account`,
+      url: `${process.env.REACT_APP_URL}account`,
       data: data
     })
   }
@@ -16,7 +16,7 @@ export const readAccount = () => {
     type: 'READ_ACCOUNT',
     payload: axios({
       method: 'GET',
-      url: `http://54.159.148.159/account`
+      url: `${process.env.REACT_APP_URL}account`
     })
   }
 }
@@ -26,7 +26,7 @@ export const updateAccount = (id, data) => {
     type: 'UPDATE_ACCOUNT',
     payload: axios({
       method: 'PATCH',
-      url: `http://54.159.148.159/account/${id}`,
+      url: `${process.env.REACT_APP_URL}account/${id}`,
       data: data
     })
   }
@@ -37,7 +37,7 @@ export const deleteAccount = (id) => {
     type: 'DELETE_ACCOUNT',
     payload: axios({
       method: 'DELETE',
-      url: `http://54.159.148.159/account/${id}`
+      url: `${process.env.REACT_APP_URL}account/${id}`
     })
   }
 }
@@ -47,7 +47,7 @@ export const changePassword = (id, data) => {
     type: 'CHANGE_PASSWORD',
     payload: axios({
       method: 'PATCH',
-      url: `http://54.159.148.159/account/password/${id}`,
+      url: `${process.env.REACT_APP_URL}account/password/${id}`,
       data: data
     })
   }
