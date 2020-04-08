@@ -1,5 +1,5 @@
 # TABLE OF CONTENTS
-- [RELEASE WEBSITE](RELEASE WEBSITE)
+- [RELEASE WEBSITE](#release-website)
 - [SCREENSHOT DEMO](#screenshoot-demo)
 - [FEATURES](#FEATURES)
 - [SOFTWARE I USE](#software-i-use)
