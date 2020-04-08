@@ -1,4 +1,5 @@
 # TABLE OF CONTENTS
+- [RELEASE WEBSITE](RELEASE WEBSITE)
 - [SCREENSHOT DEMO](#screenshoot-demo)
 - [FEATURES](#FEATURES)
 - [SOFTWARE I USE](#software-i-use)
@@ -6,6 +7,11 @@
 - [DEV DEPENDENCIES](#dev-dependencies)
 - [INSTALLATION](#INSTALLATION)
 <hr>
+
+## RELEASE WEBSITE
+<a href="http://bit.ly/Cashierun-Web-Demo">
+  <img alt="Website" src="https://img.shields.io/website?url=http%3A%2F%2Fbit.ly%2FCashierun-Web-Demo">
+</a>
 
 ## SCREENSHOOT DEMO
 - <b>LOGIN </b>
@@ -68,6 +74,7 @@
 
 ## INSTALLATION
 ```bash
+$ git clone https://github.com/mannisar/Cashierun-Web.git
 $ npm install
 ```
 
