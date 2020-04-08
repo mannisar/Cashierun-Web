@@ -1,6 +1,6 @@
 # TABLE OF CONTENTS
 - [RELEASE WEBSITE](#release-website)
-- [SCREENSHOT DEMO](#screenshoot-demo)
+- [SCREENSHOT DEMO](#screenshot-demo)
 - [FEATURES](#FEATURES)
 - [SOFTWARE I USE](#software-i-use)
 - [DEPENDENCIES](#DEPENDENCIES)
@@ -13,7 +13,7 @@
   <img alt="Website" src="https://img.shields.io/website?url=http%3A%2F%2Fbit.ly%2FCashierun-Web-Demo">
 </a>
 
-## SCREENSHOOT DEMO
+## SCREENSHOT DEMO
 - <b>LOGIN </b>
 ![Login](https://user-images.githubusercontent.com/42530153/78211824-4655af80-74d8-11ea-837b-595ea448ffc1.jpg)
 
