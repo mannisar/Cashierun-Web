@@ -1,3 +1,6 @@
+![Penyakit](https://user-images.githubusercontent.com/42530153/94930145-356e1100-04f0-11eb-89f0-ce60732ceeab.png)
+
+
 # TABLE OF CONTENTS
 - [RELEASE WEBSITE](#release-website)
 - [SCREENSHOT DEMO](#screenshot-demo)
